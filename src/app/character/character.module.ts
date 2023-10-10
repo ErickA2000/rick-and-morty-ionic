@@ -8,6 +8,7 @@ import { CharacterPageRoutingModule } from './character-routing.module';
 
 import { CharacterPage } from './character.page';
 import { CardComponent } from './components/card/card.component';
+import { OneCharacterComponent } from './page/one-character/one-character.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { CardComponent } from './components/card/card.component';
   ],
   declarations: [
     CharacterPage,
-    CardComponent
+    CardComponent,
+    OneCharacterComponent
   ]
 })
 export class CharacterPageModule {}

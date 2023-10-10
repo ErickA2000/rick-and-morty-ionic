@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ResponseAllCharacters } from '../interfaces/character.interface';
+import { Character, ResponseAllCharacters } from '../interfaces/character.interface';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -18,5 +18,11 @@ export class CharacterService {
     const url = `${this.baseUrl}/character`
 
     return this.http.get<ResponseAllCharacters>( url );
+  }
+
+  getOneCharacter( id: number ): Observable<Character>{
+    const url = `${this.baseUrl}/character/${id}`;
+
+    return this.http.get<Character>( url );
   }
 }
